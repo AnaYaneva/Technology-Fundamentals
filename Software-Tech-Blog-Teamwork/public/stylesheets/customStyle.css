@@ -1,0 +1,128 @@
+.body{
+    height: 100%;
+}
+.parallax{
+    background-image: url('../images/detelin.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#parallax-content{
+    background-image: url('../images/rose.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#parallax-details{
+    background-image: url('../images/grass.jpg');
+    width: 100%;
+    height: 50%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.parallax-edit-create{
+    background-image: url('../images/apple.jpg');
+    width: 100%;
+    height: 50%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.parallax-edit-create label{
+    color:white;
+}
+.parallax-edit-create legend{
+    color:white;
+}
+
+#profession-container{
+
+    text-align: center;
+    padding-top:70px ;
+    padding-bottom: 70px;
+    margin: 50px;
+    background-color:  rgb(107,142,35);
+    border-radius: 20px;
+    border:5px solid #6B8E23;
+
+
+}
+#profession-link{
+    text-decoration: none;
+    color:#ECF0F1;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+#profession-link:hover{
+    color:black;
+
+}
+
+#article-img{
+
+    width:100%;
+
+}
+#content-article{
+    display: inline-block;
+    align-items: center
+}
+#image-box-article{
+    height:222px;
+    width:240px;
+}
+#caption-article{
+    color:inherit;
+}
+#container-img-details{
+    width:360px;
+    height: 300px;
+}
+#details-img{
+    width: 100%;
+    height: 100%;
+}
+#picture-and-info{
+    bored:3px solid #F1F1F1;
+    color:black;
+
+
+}
+.section-info{
+    opacity: 0.4;
+    background-color: #F1F1F1;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#education-info{
+    opacity: 0.4;
+    background-color: #F1F1F1;
+    box-shadow: 5px 5px 5px #888888;
+}
+.details-box{
+    margin:15px;
+}
+#working-info{
+    color:black;
+}
+#telephone-btn{
+    position: fixed;
+    bottom: 0;
+    left:0;
+}
+#edit-btn{
+    position: fixed;
+    bottom: 0;
+    right:0;
+}
+#label{
+    color: black;
+    opacity: 0.7;
+}

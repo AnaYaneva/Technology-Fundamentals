@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Info</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/customStyle.css' />
+    <link rel="icon" href="/images/images.png">
+    <script src="/javascripts/jquery-1.10.2.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top text-uppercase">
+            <div class="container">
+                <div class="navbar-header">
+                    <img class="navbar-brand" src="/images/images.png">
+                    <a href="/" class="navbar-brand">Medical Info</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                {{#if isAdmin}}
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                   role="button" aria-expanded="false">Admin<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/admin/user/all">Users</a></li>
+                                    <li><a href="/admin/profession/all">Profession</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="/user/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                {{else}}
+                {{#if user}}
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/article/details/{{{user.ObjectId}}}">Welcome {{user.fullName}}</a></li>
+                            <li><a href="/article/create">New profile</a></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                {{/if}}
+                {{/if}}
+                {{#unless user}}
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/user/register">Register</a></li>
+                            <li><a href="/user/login">Login</a></li>
+                        </ul>
+                    </div>
+                {{/unless}}
+            </div>
+        </div>
+    </header>
+    {{#if error }}
+        <h2>{{error}}</h2>
+    {{/if}}
+    {{{body}}}
+</body>
+<footer>
+    <div class="container modal-footer">
+        <p>© 2016 - Team "U-BitTeam-JS"</p>
+    </div>
+</footer>
+</html>

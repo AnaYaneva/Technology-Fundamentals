@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Thea the Photographer", "01. Thea the Photographer\01. Thea the Photographer.csproj", "{B66C4494-BC8F-4A33-9FC1-2D64199DA3BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Trophon the Grumpy Cat", "02. Trophon the Grumpy Cat\02. Trophon the Grumpy Cat.csproj", "{017EB8A1-E78F-4020-9817-E57C1C607FAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B66C4494-BC8F-4A33-9FC1-2D64199DA3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66C4494-BC8F-4A33-9FC1-2D64199DA3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66C4494-BC8F-4A33-9FC1-2D64199DA3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66C4494-BC8F-4A33-9FC1-2D64199DA3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017EB8A1-E78F-4020-9817-E57C1C607FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017EB8A1-E78F-4020-9817-E57C1C607FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017EB8A1-E78F-4020-9817-E57C1C607FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017EB8A1-E78F-4020-9817-E57C1C607FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

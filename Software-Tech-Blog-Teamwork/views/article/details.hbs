@@ -1,0 +1,101 @@
+<div class="container body-content body">
+    <div class="row" id="parallax-details">
+            <article>
+                <div class="details">
+                    <div class="row">
+                       <section id="picture-and-info" class="col-md-12 ">
+                           <div class="container-fluid col-md-4 details-box" id="container-img-details">
+                                <img id="details-img" src="{{article.photo}}" alt="not working">
+                           </div>
+                           <div class="col-md-7 details-box section-info">
+                               <h3>
+                                   {{article.name}}
+                               </h3>
+                               <h3>
+                                   Age:{{article.age}}
+                               </h3>
+                               <h3>
+                                   Place of Birth  {{article.city}}
+                               </h3>
+                           </div>
+                           <div class="col-md-3 details-box section-info">
+                               <h3>Certifications:<h5>{{article.certifications}}</h5>
+                               </h3>
+                           </div>
+                           <div class="col-md-3 details-box section-info">
+                               <h4>University Degree:{{article.education}}
+                               </h4>
+                               <h4>Specialization: {{article.specialization}}
+                               </h4>
+                           </div>
+                       </section>
+                    </div>
+                    <div class="row">
+                        <section id="working-info" class="col-md-12 ">
+                         <div class="col-md-5 details-box section-info">
+                            <h3><h3>About me:</h3> {{article.content}}
+                            </h3>
+                        </div>
+                        <div class="col-md-5 details-box section-info">
+                           <h3><h3>Current Working Place:</h3> {{article.workplace}}
+                           </h3>
+                           <h3><h5>Working Experience:</h5> {{article.work}}
+                           </h3>
+                        </div>
+                        </section>
+                    </div>
+                </div>
+                <div id="telephone-btn">
+                    <a href="tel:{{this.telephone}}" class="btn btn-default" role="button">{{article.telephone}}</a>
+                </div>
+                <footer>
+                    <div id="edit-btn">
+                        {{#if isUserAuthorized}}
+                            <a class="btn btn-sm btn-success" href="/article/edit/{{article.id}}">Edit &raquo;</a>
+                            <a class="btn btn-sm btn-danger" href="/article/delete/{{article.id}}">Delete &raquo;</a>
+                        {{/if}}
+                        <a class="btn btn-default btn-sm" href="/">Back &raquo;</a>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- BEGIN #comments -->
+
+            <div class="body-content">
+                {{#if user}}
+                    <div align="center">
+                        <form class="form-horizontal" method="POST" action="/article/details/{{article.id}}">
+                            <div class="form-group">
+                                <label id="label">Add comment:</label> <br>
+                                <input type="text" class="form-control" placeholder="{{user.email}}" value="E-mail: {{user.email}}" name="title" disabled >
+
+                                <input type="text" class="form-control"  placeholder="{{user.fullName}}" value="Име: {{user.fullName}}" name="title" disabled >
+
+                                <textarea class="form-control" cols="100" rows="10" id="comment" placeholder="Текст на коментара" name="content" ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                {{/if}}
+                <hr>
+                {{#each comments}}
+                    <div class="media-body">
+                        <div class="well well-lg">
+                            <h class="media-heading text-uppercase reviews">{{this.author.fullName}}</h>
+                            <p class="media-comment">
+                                {{this.content}}
+                            </p>
+                        </div>
+
+                    </div>
+                {{/each}}
+                <!--end-->
+            </div>
+
+        </div>
+    </div>
+
+

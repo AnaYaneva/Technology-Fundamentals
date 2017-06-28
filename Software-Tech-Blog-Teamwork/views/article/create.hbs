@@ -1,0 +1,114 @@
+<div class="container body-content span=8 offset=2">
+    <div class="well parallax-edit-create" >
+        <form class="form-horizontal" method="POST" action="/article/create">
+            <fieldset>
+                <legend><b>New Profile</b></legend>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileName">Name</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileName" placeholder="Name" name="name" required >
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileProfession">Profession</label>
+                    <div class="col-sm-4 ">
+                        <select class="form-control" id="profileProfession" placeholder="Profession" name="profession" required >
+                            {{#each professions}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                <label class="col-sm-4 control-label" for="profileAge">Age</label>
+                <div class="col-sm-4 ">
+                    <input type="text" class="form-control" id="profileAge" placeholder="Age" name="age" required >
+                </div>
+            </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="article_tags">Residence City</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="article_tags"
+                               placeholder="City"
+                               name="tagNames">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileCity">Place of Birth</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileCity" placeholder="Birthplace" name="city" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileEducation">University Degree</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileEducation" placeholder="Education" name="education" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileSpecialization">Specialization</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileSpecialization" placeholder="Specialization" name="specialization" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileCertifications">Certifications</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="profileCertifications" rows="5" name="certifications" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileWorkplace">Current Working Place</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileWorkplace" placeholder="Working place" name="workplace" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileWork">Working Experience</label>
+                    <div class="col-sm-6 ">
+                        <textarea class="form-control" id="profileWork" rows="5" name="work" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileContent">About me</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="profileContent" rows="5" name="content" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileaddress">Address</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileaddress" placeholder="address" name="address" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileTelephone">Telephone Number</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profileTelephone" placeholder="Telephone Number" name="telephone" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="profileTelephone">Profile photo (URL)</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="profilePhoto" placeholder="URL" name="photo" required >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+
+                        <button type="reset" class="btn btn-default">Cancel</button>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
